@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.CSubBaseVO" table="RT_CSubBase_mst">
+   <id name="csbid" type="long" column="ID" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="s1">
+   <column name="ECB_Sampling" />
+  </property>
+  
+  <property name="s2">
+  <column name="GSB_Sampling"/>
+  </property>
+  
+  <property name="lt1">
+  <column name="ECB_LT"/>
+  </property>
+  
+  <property name="lt2">
+  <column name="GSB_LT"/>
+  </property>
+  
+  <property name="ft1">
+  <column name="ECB_FT"/>
+  </property>
+  
+  <property name="ft2">
+  <column name="GSB_FT"/>
+  </property>
+  
+ </class>
+</hibernate-mapping>

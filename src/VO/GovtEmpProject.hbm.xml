@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.GovtEmpProjectVO" table="RT_GovtEmpProject_dtl">
+   <id name="Mapping_ID" type="long" column="Mapping_ID" >
+   <generator class="increment"/>
+  </id>
+
+  <many-to-one name="geVO" class="VO.GovtEmpVO" column="Emp_ID" cascade="delete"></many-to-one>
+  <many-to-one name="tenderVO" class="VO.TenderVO" column="Tender_ID" cascade="delete"></many-to-one>
+  </class>
+</hibernate-mapping>

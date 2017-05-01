@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.TenderVO" table="RT_Tender_mst">
+   <id name="tender_Id" type="long" column="Tender_ID" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="tender_Name">
+   <column name="Tender_Name" /> </property>
+ 
+ <property name="tender_Description">
+   <column name="Tender_Description" />
+  </property>
+  
+ 
+   <many-to-one name="categoryVO" class="VO.CategoryVO" column="category_ID" cascade="delete"></many-to-one>
+    <many-to-one name="subCategoryVO" class="VO.SubCategoryVO" column="subCategory_ID" cascade="delete"></many-to-one>
+    
+<!--      <set name="tset" table="rt_tenderdesc_mst" cascade="delete" inverse="true" lazy="true" fetch="select">
+            
+      <key>
+          <column name="tender_Id" not-null="true" />
+      </key>
+            
+       <one-to-many class="VO.TenderDescVO" />
+  </set>
+  
+   <set name="t1set" table="rt_tendercriteria_mst" cascade="delete" inverse="true" lazy="true" fetch="select">
+            
+      <key>
+          <column name="tender_Id" not-null="true" />
+      </key>
+            
+       <one-to-many class="VO.TenderCriteriaVO" />
+  </set> -->
+  
+   
+  </class>
+</hibernate-mapping>

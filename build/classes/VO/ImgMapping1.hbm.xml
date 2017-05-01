@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.ImgMapping1VO" table="img_mpg1" lazy="false" >
+  
+   <id name="mpg_ID" type="int" column="MappingID" ><generator class="increment"/> </id>
+ 
+   
+   <property name="mpg_Name"><column name="attachmentName" /></property>
+   
+   <property name="path"><column name="path" /></property>
+   
+   <many-to-one name="cvo" class="VO.CompanyVO" cascade="delete"  fetch="select" column="id"></many-to-one>
+  
+  </class>
+</hibernate-mapping>

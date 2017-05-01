@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.GBaseCourseVO" table="RT_GBaseCourse_mst">
+   <id name="cscid" type="long" column="CSC_ID" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="s1">
+   <column name="WBM_Sampling" />
+  </property>
+  
+  <property name="s2">
+  <column name="WMM_Sampling"/>
+  </property>
+  
+  <property name="lt1">
+  <column name="WBM_LT"/>
+  </property>
+  
+  <property name="lt2">
+  <column name="WMM_LT"/>
+  </property>
+  
+  <property name="ft1">
+  <column name="WBM_FT"/>
+  </property>
+  
+  <property name="ft2">
+  
+  <column name="WMM_FT"/>
+  </property>
+  
+   <property name="inote">
+  <column name="Instruction_Note"/>
+  </property>
+ 
+  <property name="remark">
+  <column name="Remark"/>
+  </property>
+ 
+<many-to-one name="tvo" class="VO.TenderVO" column="tender_Id" cascade="delete"></many-to-one>
+ 
+    
+ </class>
+</hibernate-mapping>

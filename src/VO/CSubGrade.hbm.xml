@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.CSubGradeVO" table="RT_CSubGrade_mst">
+   <id name="csgid" type="long" column="CSG_ID" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="sf">
+   <column name="F_Sampling" />
+  </property>
+  
+  <property name="sc">
+  <column name="C_Sampling"/>
+  </property>
+  
+  <property name="ltf">
+  <column name="F_LT"/>
+  </property>
+  
+  <property name="ltc">
+  <column name="C_LT"/>
+  </property>
+  
+  <property name="ftf">
+  <column name="F_FT"/>
+  </property>
+  
+  <property name="ftc">
+  <column name="C_FT"/>
+  </property>
+  
+ </class>
+</hibernate-mapping>

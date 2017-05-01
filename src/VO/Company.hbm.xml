@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.CompanyVO" table="RT_Company_dtl">
+   <id name="id" type="long" column="ID" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="Name">
+   <column name="Name" /> </property>
+ 
+ <property name="FAX">
+   <column name="FAX" />
+  </property>
+  
+  <property name="complex">
+   <column name="complex" />
+  </property>
+  
+  
+  <property name="WorkExpind">
+   <column name="WorkExpind" />
+  </property>
+   <property name="WorkExpjoin">
+   <column name="WorkExpjoin" />
+  </property>
+  
+   <property name="Turnover">
+   <column name="Turnover" /> </property>
+ 
+  <property name="EmailId">
+   <column name="EmailId" /> </property>
+ 
+  <property name="ContactNo">
+   <column name="ContactNo" /> </property>
+ 
+ <property name="HighestValueProj">
+   <column name="HighestValueProj" /> </property>
+   
+ 
+ <property name="minBalance">
+   <column name="minBalance" />
+  </property>
+    
+  <many-to-one name="userVO" class="VO.UserVO" column="User_ID" cascade="delete"></many-to-one>
+  <many-to-one name="areaVO" class="VO.AreaVO" column="Area_ID" cascade="delete"></many-to-one>
+  <many-to-one name="cityVO" class="VO.CityVO" column="City_ID" cascade="delete"></many-to-one>
+  <many-to-one name="streetVO" class="VO.StreetVO" column="Street_ID" cascade="delete"></many-to-one>
+  <many-to-one name="gradeVO" class="VO.GradeVO" column="Grade_ID" cascade="delete"></many-to-one>
+  </class>
+</hibernate-mapping>

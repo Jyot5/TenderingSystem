@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.WorkTypeVO" table="RT_WorkType_mst">
+   <id name="workType_ID" type="long" column="WorkType_ID" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="workType_Name">
+   <column name="WorkType_Name" /> </property>
+ 
+ <property name="workType_Description">
+   <column name="WorkType_Description" />
+  </property>
+  
+    
+  
+  </class>
+</hibernate-mapping>

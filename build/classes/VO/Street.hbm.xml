@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.StreetVO" table="RT_Street_mst">
+   <id name="street_ID" type="long" column="Street_ID" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="street_Name">
+   <column name="Street_Name" />
+  </property>
+   <property name="street_Desc">
+   <column name="Street_Desc" />
+  </property>
+ <many-to-one name="cityVO" class="VO.CityVO" column="City_ID" cascade="delete"></many-to-one>
+  <many-to-one name="areaVO" class="VO.AreaVO" column="Area_ID" cascade="delete"></many-to-one>
+ </class>
+</hibernate-mapping>

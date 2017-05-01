@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.CBituminousVO" table="RT_CBituminous_mst">
+   <id name="cbid" type="long" column="CB_ID" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="bm">
+   <column name="BM" />
+  </property>
+  
+  <property name="bc">
+  <column name="BC"/>
+  </property>
+  
+  <property name="sdbc">
+  <column name="SDBC"/>
+  </property>
+  
+  <property name="dbm">
+  <column name="DBM"/>
+  </property>
+  
+  <property name="bt">
+  <column name="BT"/>
+  </property>
+  
+ 
+  
+ </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.CategoryVO" table="RT_Category_mst">
+   <id name="category_ID" type="long" column="Category_ID" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="category_Name">
+   <column name="Category_Name" />
+  </property>
+  <property name="category_Description">
+  <column name="Category_Description"/>
+  </property>
+  
+ </class>
+</hibernate-mapping>

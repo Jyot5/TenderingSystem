@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.ComplaintVO" table="RT_Complaint_mst">
+   <id name="Complaint_ID" type="long" column="Complaint_ID" >
+   <generator class="increment"/>
+  </id>
+
+ 
+  <property name="sub">
+   <column name="Subject" />
+  </property>
+
+  <property name="msg">
+   <column name="message" />
+  </property>
+
+ 
+   <many-to-one name="userVO" class="VO.UserVO" column="From_ID" cascade="delete"></many-to-one>
+  <many-to-one name="TenderVO" class="VO.TenderVO" column="Tender_ID" cascade="delete"></many-to-one>
+ </class>
+</hibernate-mapping>

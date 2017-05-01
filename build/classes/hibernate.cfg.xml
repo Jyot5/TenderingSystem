@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+  <property name="hibernate.connection.driver_class">
+
+com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.url">
+
+jdbc:mysql://localhost/RT</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.connection.password"></property>
+  <property name="hibernate.connection.pool_size">10</property>
+  <property name="show_sql">true</property>
+  <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  <!-- Mapping files -->
+
+  <mapping resource="VO/Area.hbm.xml"/>
+ 
+  <mapping resource="VO/BasicUser.hbm.xml"/>
+  <mapping resource="VO/Category.hbm.xml"/>
+  <mapping resource="VO/City.hbm.xml"/>
+  <mapping resource="VO/CompanyProject.hbm.xml"/>
+  <mapping resource="VO/Company.hbm.xml"/>
+  <mapping resource="VO/Complaint.hbm.xml"/>
+  <mapping resource="VO/Feedback.hbm.xml"/>
+
+  <mapping resource="VO/GovtEmpProject.hbm.xml"/>
+  <mapping resource="VO/Grade.hbm.xml"/>
+  <mapping resource="VO/Location.hbm.xml"/>
+  <mapping resource="VO/Street.hbm.xml"/>
+  <mapping resource="VO/SubCategory.hbm.xml"/>
+  <mapping resource="VO/Tender.hbm.xml"/>
+  <mapping resource="VO/TenderDesc.hbm.xml"/>
+  <mapping resource="VO/TenderCriteria.hbm.xml"/>
+  <mapping resource="VO/User.hbm.xml"/>
+  <mapping resource="VO/WorkType.hbm.xml"/>
+  <mapping resource="VO/ApplyTender.hbm.xml"/>
+   <mapping resource="VO/GovtEmp.hbm.xml"/> 
+    <mapping resource="VO/ImgMapping.hbm.xml"/>
+    <mapping resource="VO/CBaseCourse.hbm.xml"/>
+    <mapping resource="VO/CBituminous.hbm.xml"/>
+    <mapping resource="VO/CSubBase.hbm.xml"/>
+    <mapping resource="VO/CSubGrade.hbm.xml"/>
+    <mapping resource="VO/link.hbm.xml"/>
+    <mapping resource="VO/GBaseCourse.hbm.xml"/>
+    <mapping resource="VO/GBituminous.hbm.xml"/>
+    <mapping resource="VO/GSubBase.hbm.xml"/>
+    <mapping resource="VO/GSubGrade.hbm.xml"/>
+    <mapping resource="VO/User1.hbm.xml"/>
+    <mapping resource="VO/ImgMapping1.hbm.xml"/>
+</session-factory>
+</hibernate-configuration>

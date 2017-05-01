@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.GradeVO" table="RT_Grade_mst">
+   <id name="grade_ID" type="long" column="Grade_ID" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="grade_Name">
+   <column name="Grade_Name" />
+  </property>
+  <property name="grade_Description">
+  <column name="Grade_Description"/>
+  </property>
+  
+ </class>
+</hibernate-mapping>

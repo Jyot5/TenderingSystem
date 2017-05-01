@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.GBituminousVO" table="RT_GBituminous_mst">
+   <id name="cbid" type="long" column="CB_ID" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="bm">
+   <column name="BM" />
+  </property>
+  
+  <property name="bc">
+  <column name="BC"/>
+  </property>
+  
+  <property name="sdbc">
+  <column name="SDBC"/>
+  </property>
+  
+  <property name="dbm">
+  <column name="DBM"/>
+  </property>
+  
+  <property name="bt">
+  <column name="BT"/>
+  </property>
+  
+  <property name="inote">
+  <column name="Instruction_Note"/>
+  </property>
+ 
+  <property name="remark">
+  <column name="Remark"/>
+  </property>
+ 
+ <many-to-one name="tvo" class="VO.TenderVO" column="tender_Id" cascade="delete"></many-to-one>
+  
+ </class>
+</hibernate-mapping>
